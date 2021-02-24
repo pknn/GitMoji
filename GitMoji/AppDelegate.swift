@@ -8,7 +8,6 @@
 import Cocoa
 import SwiftUI
 
-@available(OSX 11.0, *)
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -32,8 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func initializePopover() {
-        let contentView = ContentView()
-        self.popover.contentSize = NSSize(width: 300, height: 400)
+        let contentView = GitmojiListView()
+        self.popover.contentSize = NSSize(width: 400, height: 400)
         self.popover.behavior = .transient
         self.popover.contentViewController = NSHostingController(rootView: contentView)
     }

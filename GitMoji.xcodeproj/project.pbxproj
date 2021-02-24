@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		AF24DD7425E4F6E000CD236E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24DD7325E4F6E000CD236E /* AppDelegate.swift */; };
-		AF24DD7625E4F6E000CD236E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24DD7525E4F6E000CD236E /* ContentView.swift */; };
 		AF24DD7825E4F6E100CD236E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF24DD7725E4F6E100CD236E /* Assets.xcassets */; };
 		AF24DD7B25E4F6E100CD236E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF24DD7A25E4F6E100CD236E /* Preview Assets.xcassets */; };
 		AF24DD7E25E4F6E100CD236E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF24DD7C25E4F6E100CD236E /* Main.storyboard */; };
+		AF24DD8B25E4FAF800CD236E /* gitmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = AF24DD8A25E4FAF800CD236E /* gitmoji.json */; };
+		AF24DD8E25E4FB1800CD236E /* Gitmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24DD8D25E4FB1800CD236E /* Gitmoji.swift */; };
+		AF24DD9125E5002C00CD236E /* GitmojiRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24DD9025E5002C00CD236E /* GitmojiRowView.swift */; };
+		AF24DD9425E502E800CD236E /* GitmojiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24DD9325E502E800CD236E /* GitmojiListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF24DD7025E4F6E000CD236E /* GitMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF24DD7325E4F6E000CD236E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF24DD7525E4F6E000CD236E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF24DD7725E4F6E100CD236E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF24DD7A25E4F6E100CD236E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF24DD7D25E4F6E100CD236E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF24DD7F25E4F6E100CD236E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF24DD8025E4F6E100CD236E /* GitMoji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitMoji.entitlements; sourceTree = "<group>"; };
+		AF24DD8A25E4FAF800CD236E /* gitmoji.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gitmoji.json; sourceTree = "<group>"; };
+		AF24DD8D25E4FB1800CD236E /* Gitmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gitmoji.swift; sourceTree = "<group>"; };
+		AF24DD9025E5002C00CD236E /* GitmojiRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitmojiRowView.swift; sourceTree = "<group>"; };
+		AF24DD9325E502E800CD236E /* GitmojiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitmojiListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,16 @@
 		AF24DD7225E4F6E000CD236E /* GitMoji */ = {
 			isa = PBXGroup;
 			children = (
+				AF24DD8925E4FA5C00CD236E /* models */,
+				AF24DD8825E4FA5700CD236E /* controllers */,
+				AF24DD8725E4FA4700CD236E /* views */,
 				AF24DD7325E4F6E000CD236E /* AppDelegate.swift */,
-				AF24DD7525E4F6E000CD236E /* ContentView.swift */,
 				AF24DD7725E4F6E100CD236E /* Assets.xcassets */,
 				AF24DD7C25E4F6E100CD236E /* Main.storyboard */,
 				AF24DD7F25E4F6E100CD236E /* Info.plist */,
 				AF24DD8025E4F6E100CD236E /* GitMoji.entitlements */,
 				AF24DD7925E4F6E100CD236E /* Preview Content */,
+				AF24DD8A25E4FAF800CD236E /* gitmoji.json */,
 			);
 			path = GitMoji;
 			sourceTree = "<group>";
@@ -72,6 +81,30 @@
 				AF24DD7A25E4F6E100CD236E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF24DD8725E4FA4700CD236E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AF24DD9025E5002C00CD236E /* GitmojiRowView.swift */,
+				AF24DD9325E502E800CD236E /* GitmojiListView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		AF24DD8825E4FA5700CD236E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		AF24DD8925E4FA5C00CD236E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AF24DD8D25E4FB1800CD236E /* Gitmoji.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +167,7 @@
 				AF24DD7E25E4F6E100CD236E /* Main.storyboard in Resources */,
 				AF24DD7B25E4F6E100CD236E /* Preview Assets.xcassets in Resources */,
 				AF24DD7825E4F6E100CD236E /* Assets.xcassets in Resources */,
+				AF24DD8B25E4FAF800CD236E /* gitmoji.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF24DD7625E4F6E000CD236E /* ContentView.swift in Sources */,
+				AF24DD9125E5002C00CD236E /* GitmojiRowView.swift in Sources */,
 				AF24DD7425E4F6E000CD236E /* AppDelegate.swift in Sources */,
+				AF24DD8E25E4FB1800CD236E /* Gitmoji.swift in Sources */,
+				AF24DD9425E502E800CD236E /* GitmojiListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.pknn.GitMoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -319,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.pknn.GitMoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
